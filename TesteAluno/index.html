@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal do Aluno</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>🩺 Portal do Aluno</h1>
+    <p class="subtitle">Curso de Enfermagem</p>
+
+    <div class="abas">
+      <button type="button" id="abaCadastro" class="aba ativa" onclick="mostrarAba('cadastro')">Cadastro</button>
+      <button type="button" id="abaLogin" class="aba" onclick="mostrarAba('login')">Login</button>
+    </div>
+
+    <form id="formCadastro" onsubmit="return false">
+      <div class="input-group">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome">
+        <small class="erro-msg" id="erroNome"></small>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <small class="erro-msg" id="erroEmail"></small>
+      </div>
+      <div class="input-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha">
+        <small class="erro-msg" id="erroSenha"></small>
+      </div>
+      <div class="input-group">
+        <label for="confirmar">Confirmar senha</label>
+        <input type="password" id="confirmar">
+        <small class="erro-msg" id="erroConfirmar"></small>
+      </div>
+      <button type="button" class="btn" onclick="cadastrar()">Cadastrar</button>
+      <p class="mensagem" id="msgCadastro"></p>
+    </form>
+
+    <form id="formLogin" class="oculto" onsubmit="return false">
+      <div class="input-group">
+        <label for="loginEmail">Email</label>
+        <input type="text" id="loginEmail">
+        <small class="erro-msg" id="erroLoginEmail"></small>
+      </div>
+      <div class="input-group">
+        <label for="loginSenha">Senha</label>
+        <input type="password" id="loginSenha">
+        <small class="erro-msg" id="erroLoginSenha"></small>
+      </div>
+      <button type="button" class="btn" onclick="login()">Entrar</button>
+      <p class="mensagem" id="msgLogin"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
